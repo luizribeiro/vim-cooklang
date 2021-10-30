@@ -4,7 +4,7 @@ end
 
 " Ingredients
 syntax match cookIngredient "@[A-Za-z]\+"
-syntax match cookMultiWordIngredient "@[^{]\{-}{[^}]*}"
+syntax match cookMultiWordIngredient "@[^@{]\{-}{[^}]*}"
 
 " Metadata
 syntax match cookMetadataKey "[^:]\+:"
@@ -14,7 +14,7 @@ syntax region cookMetadata start="^>>" end="$"
 
 " Cookware
 syntax match cookCookware "#[A-Za-z]\+"
-syntax match cookMultiWordCookware "#[^{]\{-}{}"
+syntax match cookMultiWordCookware "#[^#{]\{-}{}"
 
 " Timer
 syntax match cookTimer "\~[^{]\{-}{[^}]*}"
