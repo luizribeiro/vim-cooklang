@@ -10,7 +10,7 @@ syntax match cookQuantity "{[^}]*}"
       \ contains=cookNumbers,cookUnit,cookQuantityScaling,cookSymbol
 
 " Ingredients
-syntax match cookIngredient "@[^@{]\{-}{[^}]*}\|@[A-Za-z]\+"
+syntax match cookIngredient "@[A-Za-z ]\{-}{[^}]*}\|@[A-Za-z]\+"
       \ contains=cookSymbol,cookQuantity
 
 " Metadata
