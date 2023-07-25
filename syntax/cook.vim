@@ -29,7 +29,8 @@ syntax match cookTimer "\~[^{]\{-}{[^}]*}"
 
 " Comments
 syntax keyword cookTodo contained TODO FIXME NOTE
-syntax match cookComment "//.*$" contains=cookTodo
+syntax match cookComment "--.*$" contains=cookTodo
+syntax match cookBlockComment "\[[^\]]*\]" contains=cookTodo
 
 highlight def link cookUnit Label
 highlight def link cookNumbers Number
@@ -44,5 +45,6 @@ highlight def link cookCookware Type
 highlight def link cookTimer Number
 highlight def link cookTodo Todo
 highlight def link cookComment Comment
+highlight def link cookBlockComment Comment
 
 let b:current_syntax = 'cook'
