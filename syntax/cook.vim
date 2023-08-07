@@ -29,7 +29,7 @@ syntax match cookTimer "\~[^{]\{-}{[^}]*}"
 
 " Comments
 syntax keyword cookTodo contained TODO FIXME NOTE
-syntax match cookComment "//.*$" contains=cookTodo
+syntax match cookComment "--.*$" contains=cookTodo
 
 highlight def link cookUnit Label
 highlight def link cookNumbers Number
